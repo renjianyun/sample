@@ -1,0 +1,4 @@
+ctrl+shift+L
+crtl+J
+
+crtl+D crtl+K crtl+U

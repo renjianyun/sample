@@ -1,0 +1,31 @@
+
+<script type="text/javascript">
+
+function inherit(superType,subType){
+	var _prototype = Object.create(superType.prototype);
+	_prototype.constructor = subType;
+	subType.prototype = _prototype;
+}
+
+
+	function	Parent(){
+		this.aa = 111;
+	}
+
+	function Child(){
+		this.bb = 111;
+		Parent.call(this);
+	}
+
+	
+	inherit(Parent,Child);
+
+	//在Parent.call中定义组合集成，但是在他原型上的属性和方法没有继承下来。
+	Parent.prototype.fn1 = function(){
+		console.log('fn1');
+	}
+
+	var c = new Child();
+	console.log(c.aa);
+	c.fn1();
+</script>

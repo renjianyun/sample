@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	console.log('test');
+
+	function Person(nick,age){
+		this.nick = nick;
+		this.age = age;
+	}
+
+	Person.prototype.sayName = function(){
+		console.log(this.nick);
+	}
+
+	var p1 = new Person('Byron',20);
+	var p2 = new Person('renjianyun',24);
+	p1.sayName();
+	p2.sayName();
+</script>

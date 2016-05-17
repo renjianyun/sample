@@ -1,0 +1,19 @@
+<script type="text/javascript">
+	function  Person(argument) {
+		this.A = 'aa'; //实例变量
+		var B = 'bb'; //私有变量
+		console.log(B);
+		console.log(this.B);
+		console.log(this.A);
+	}
+	Person.C = 'cc'; //静态变量
+
+	var p = new Person();
+
+	console.log(p.A); //aa
+	console.log(p.B); //undefiend
+	console.log(p.C); //undefiend
+	console.log(Person.A); //undefiend
+	console.log(Person.B); //undefiend
+	console.log(Person.C); //cc
+</script>

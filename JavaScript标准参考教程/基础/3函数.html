@@ -1,0 +1,29 @@
+<script type="text/javascript">
+/*
+f();
+	if (true){
+
+  function f() {
+  	console.log('ff');
+  }
+  console.log('if');
+}
+
+f() // 不报错
+*/
+
+var multiline = function (fn) {
+  var arr = fn.toString().split('\n');
+  return arr.slice(1, arr.length - 1).join('\n');
+};
+
+function f() {/*
+  这是一个
+  多行注释
+*/}
+
+console.log(f.toString());
+console.log(multiline(f.toString()));
+// " 这是一个
+//   多行注释"
+</script>
