@@ -1,0 +1,33 @@
+<script type="text/javascript">
+	
+	// function f（）{
+
+	// }
+
+
+
+	var p = Object.getPrototypeOf(12);
+
+
+	var obj = Object.create(p);
+
+	var a = {x:1};
+	var b = {__proto__:a};
+	console.log(b.x);
+
+	function f1 () {
+		var aa = 22;
+	}
+
+	function f2 () {
+		var bb = 33;
+	}
+
+
+
+	var fn1 = new f1();
+	f2.prototype = fn1;
+	f2.prototype.constructor = f2;
+
+	var fn2 = new f2();
+</script>
